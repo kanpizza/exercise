@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Gmail</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <script type="text/javascript"src="js/jquery-1.11.3.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="css/material.min.css">
+      <script src="css/material.min.js"></script>
+    </head>
+  <!-- <div class="card-panel grey lighten-3"> This is a card panel with a teal lighten-2 class</div> -->
+<style>
+@media (min-width: 600px) {
+  body {
+    font-size: 118.8%; } }
+@media (min-width: 800px) {
+  body {
+    font-size: 131.3%; }
+    body h2, body h3, body h4, body h5 {
+      font-size: 1.875em; }
+    body h5 {
+      font-size: 1.375em; } }
+@media (min-width: 1030px) {
+  body {
+    font-size: 137.5%; } }
+@media (min-width: 1250px) {
+  body {
+    font-size: 143.8%; } }
+@media (min-width: 1400px) {
+  body {
+    font-size: 1.563em; } }
+</style>
+  </head>
+  <body>
+      <script type="text/javascript">
+          $(document).ready(function(){
+            $('.modal').modal();
+          });
+      </script>
+    <div  class="card-panel small grey lighten-3">
+      <div class="row">
+        <div class="col s3"><img src="img/logo_google.png" alt="LOGO" width="160"></div>
+        <div class="col s7"><div class="input-field col s6">
+          <input id="first_name2" type="text" class="validate">
+        </div><a class="waves-effect waves-light btn  blue darken-2"><i class="material-icons">search</i></a></div>
+        <div class="col s2">
+          <a href="#apps"><i class="material-icons md-dark">apps</i></a>
+          <a href="#noti"><i class="material-icons md-dark">notifications_none</i></a>
+          <a href="#profile"><img class="circle" src="img/profile.jpg"width="40" height="40"/></a>
+        </div>
+</div>
+    </div>
+<style>
+  .circle{
+        height: 40;
+        width: 40;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+    .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+    .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+
+</style>
+  <div class="row">
+    <div class="col s3">
+      <select class="browser-default black-text">
+        <option class="red-text text-darken-2" value="1">Gmail</option>
+        <option  class="black-text"value="2">Contact</option>
+        <option  class="black-text"value="3">Tasks</option>
+    </select>
+      </div>
+    <div class="col s1">
+        <a class="btn grey lighten-2" href="./"><i class="material-icons md-dark">keyboard_return</i></a>
+    </div>
+    <div class="col s3">
+        <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">move_to_inbox</i></a>
+        <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">report</i></a>
+        <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">delete</i></a>
+    </div>
+    <div class="col s2">
+        <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">folder</i><i class="material-icons md-dark">arrow_drop_down</i></a>
+        <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">local_offer</i><i class="material-icons md-dark">arrow_drop_down</i></a>
+    </div>
+    <div class="col s3">
+      <a class="waves-effect waves-light btn-small  grey lighten-2"><i class="material-icons md-dark">keyboard_arrow_left</i></a>
+      <a class="waves-effect waves-light btn-small  grey lighten-2"><i class="material-icons md-dark">keyboard_arrow_right</i></a>
+      <a class="btn dropdown-button grey lighten-2" href="#!" data-activates="dropdown4"><i class="material-icons md-dark ">keyboard</i><i class="material-icons md-dark">arrow_drop_down</i></i></a>
+        <ul id="dropdown4" class="dropdown-content"  style="width:150;">
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i> ภาษาไทย</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i> ภาษาไทย (Pattajoti)</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i> ภาษาไทย (TIS-820.2538)</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark">edit</i>ไทย</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons">spa</i>ไทย</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i>English</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i>English Dvorak</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i>English</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark">edit</i>English</a></li>
+        <hr>
+        <li><a href="#!" class="black-text">Input Tools Setting</li>
+        </ul>
+    <a class='dropdown-button btn grey lighten-2' href='#' data-activates='dropdown5'><i class="material-icons md-dark">settings</i><i class="material-icons md-dark">arrow_drop_down</i></a>
+    <ul id="dropdown5" class="dropdown-content">
+    <li><a href="#!"></li>
+    <li><a href="#!" class="btn disabled">Display density:</a></li>
+    <li><a href="#!" class="black-text"><i class="material-icons">done</i>Comfortable (on larger displays)</a></li>
+    <li><a href="#!" class="black-text">Cozy (on larger display)</a></li>
+    <li><a href="#!" class="black-text">Compact (current view)</a></li>
+    <hr>
+    <li><a href="#!" class="black-text">Configure inbox</a></li>
+    <hr>
+    <li><a href="#!" class="black-text">Settings</a></li>
+    <li><a href="#!" class="black-text">Themes</a></li>
+    <hr>
+    <li><a href="#!" class="black-text">Customize address</a></li>
+    <li><a href="#!" class="black-text">Help</li>
+    </ul>
+    </div>
+    </div>
+
+
+
+<hr>
+<div class="row">
+    <div class="col s3 ">
+    <center>  <a class="waves-effect waves-light btn  red darken-2"  href="#modal1">COMPOSE</a></center>
+    <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>New Message</h4>
+      <input type="text" name="" value="" placeholder="Recipients">
+      <input type="text" name="" value="" placeholder="Subject">
+      <p><input type="text" name="" value="" length="150"></p>
+    </div>
+    <div class="row">
+      <div class="col s10 ">
+      <a href="#" class="waves-effect waves-light btn  blue darken-2">Sent</a>
+      <a href="#noti"><i class="material-icons md-dark">text_format</i></a>
+      <a href="#file"><i class="material-icons md-dark">attach_file</i></a>
+      <a href="#insert"><i class="material-icons md-dark">insert_drive_file</i></a>
+      <a href="#photo"><i class="material-icons md-dark">photo_library</i></a>
+      <a href="#link"><i class="material-icons md-dark">link</i></a>
+      <a href="#face"><i class="material-icons md-dark">mood</i></a>
+    </div>
+      <div class="col s2">
+        <a href="#link"><i class="material-icons md-dark">delete</i></a>
+        <a class='dropdown-button btn-flat grey lighten-2' href='#' data-activates='dropdown6'><i class="material-icons md-dark">arrow_drop_down</i></a>
+        <ul id="dropdown6" class="dropdown-content">
+        <li><a href="#!"></li>
+        <li><a href="#!" class="black-text">Default to full-screen</a></li>
+        <hr>
+        <li><a href="#!" class="black-text">Label</a></li>
+        <li><a href="#!" class="black-text">Plain text mode</a></li>
+        <hr>
+        <li><a href="#!" class="black-text">Print</a></li>
+        <hr>
+        <li><a href="#!" class="black-text">Check spelling</a></li>
+        </ul>
+      </div>
+  </div>
+  </div>
+    <div class="collection">
+      <a href="#!" class="collection-item grey-lighten-2 black-text">Inbox</a>
+      <a href="#!" class="collection-item black-text">Starred</a>
+      <a href="#!" class="collection-item black-text">Impotant</a>
+      <a href="#!" class="collection-item black-text">Chats</a>
+      <a href="#!" class="collection-item black-text">Sent Mail</a>
+      <a href="#!" class="collection-item black-text">Spam</a>
+      <a href="#!" class="collection-item black-text">Trash</a>
+      <a href="#!" class="collection-item black-text">"[Gmail]/จดหมายที่ส่งแล้ว"</a>
+      <hr>
+      <a href="#!" class="collection-item black-text">Catagories</a>
+      <a href="#!" class="collection-item black-text">Manage labels</a>
+      <a href="#!" class="collection-item black-text">"Create new label"</a>
+    </div>
+    <div class="">
+
+      <center><br><br><br><br><br><i class="material-icons large">sms</i>
+      <h6 class="grey-text text-darken-2">No Hangouts contact</h6>
+      <a class="blue-text text-darken-2" href="#find">Find someone</a></center>
+    </div>
+    <br>
+    <div class="">
+      <center><ul class="tabs">
+        <li class="tab col s3 "><a class="active" draggable=""href="#"><i class="material-icons md-dark">person</i></a></li>
+        <li class="tab col s3"><a href="#"><i class="material-icons md-dark">sms</i></a></li>
+      </ul></center>
+    </div>
+    </div>
+    <div class="col s9">
+      <div class="">
+        <div class="row">
+          <div class="col s9">
+            <h6>sutinee (@sutinee1) ได้เชิญคุณเข้าร่วม ทีม "prozper-dev" บน Trello</h6>
+          </div>
+          <div class="col s3">
+            <a href="#print"><i class="material-icons md-dark">print</i></a>
+            <a href="#newwindow"><i class="material-icons md-dark">open_in_new</i></a>
+          </div>
+        </div>
+        <hr>
+        <div class="">
+          <div class="row">
+            <div class="col s1">
+                <a href="#"><img src="img/pnan.jpg" width="40" height="40" alt=""></a>
+            </div>
+            <div class="col s8">
+              <h6>sutinee invitation-do-not-reply@trello.com </h6>
+              <p>to me <a class='dropdown-button btn-flat grey lighten-2' href='#' data-activates='dropdown8'><i class="material-icons md-dark">arrow_drop_down</i></a>
+              <ul id="dropdown8" class="dropdown-content">
+              <li><p>from: sutinee invitation-do-not-erply@trello.com</p>
+                  <p>to: kanpitchaza@gmail.com</p>
+                  <p>date: Mon, Jun 5, 2017 at 10:54 AM</p>
+                  <p>subject: sutinee (@sutinee1) ได้เชิญคุณเข้าร่วม ทีม "prozper-dev" บน Trello</p>
+                  <p>mailed-by: sgemail.trello.com</p>
+                  <p>signed-by: trello.com</p>
+                  <p>encryption: Standard(TLS)Learn more</p>
+              </li>
+              </ul>
+              "content"
+            </p>
+
+            </div>
+            <div class="col s3">
+              <a href="#fav"><i class="material-icons md-dark ">star_border</i></a>
+              <a class="btn dropdown-button grey lighten-2" href="#fav"><i class="material-icons md-dark ">reply</i></a>
+              <a class='dropdown-button btn-flat grey lighten-2' data-activates='dropdown7'><i class="material-icons md-dark ">arrow_drop_down</i></a>
+              <ul id="dropdown7" class="dropdown-content">
+              <li><a href="#!" class="black-text"><i class="material-icons md-dark ">reply</i> Reply</a></li>
+              <li><a href="#!" class="black-text"><i class="material-icons md-dark ">forward</i>Forward</a></li>
+              <li><a href="#!" class="black-text">Filter messages like this</a></li>
+              <li><a href="#!" class="black-text">Print</a></li>
+              <li><a href="#!" class="black-text">Add sutinee to Contacts list</a></li>
+              <li><a href="#!" class="black-text">Delete this message</a></li>
+              <li><a href="#!" class="black-text">Blok "sutinee"</a></li>
+              <li><a href="#!" class="black-text">Report spam</a></li>
+              <li><a href="#!" class="black-text">Report phishing</a></li>
+              <li><a href="#!" class="black-text">Show original</a></li>
+              <li><a href="#!" class="black-text">Translate message</a></li>
+              <li><a href="#!" class="black-text">Mark as unread</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col s4"><p>1.38 GB (9%) of 15 GB used <br><a class="blue-text text-darken-2" href="#">Manage</a><p></div>
+        <div class="col s4"><a href="#" class="blue-text text-darken-2">Terms - Privacy</a></div>
+        <div class="col s4"><p>Last account activity: 25 minutes ago  <br><a href="#" class="blue-text text-darken-2">Details</a></div>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+
+ </div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>

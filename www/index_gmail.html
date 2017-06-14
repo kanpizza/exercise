@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Gmail</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <script type="text/javascript"src="js/jquery-1.11.3.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="css/material.min.css">
+      <script src="css/material.min.js"></script>
+    </head>
+    <style>
+    html,
+body {
+margin: 0 auto !important;
+padding: 0 !important;
+height: 100% !important;
+width: 100% !important;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+border-spacing: 0 !important;
+border-collapse: collapse !important;
+table-layout: fixed !important;
+margin: 0 auto !important;
+}
+table table table {
+table-layout: auto;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+-ms-interpolation-mode:bicubic;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],	/* iOS */
+.x-gmail-data-detectors, 	/* Gmail */
+.x-gmail-data-detectors *,
+.aBn {
+border-bottom: 0 !important;
+cursor: default !important;
+color: inherit !important;
+text-decoration: none !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+.a6S {
+display: none !important;
+opacity: 0.01 !important;
+}
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+display:none !important;
+}
+
+/* What it does: Prevents underlining the button text in Windows 10 */
+.button-link {
+text-decoration: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+/* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+@media only screen and (min-device-width: 320px) and (max-device-width: 415px) {
+.container {
+    min-width: 320px !important;
+}
+i.meteral-icons{
+  font-size: 80%;
+  width: 20%;
+}
+.material-icons{
+  font-size: 80%;
+}
+.row .col {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 0.50rem;
+  min-height: 1px;
+}
+img.img1 {
+  width: 50;
+  height: auto;
+}
+img.circle{
+  max-width: 30%;
+height: auto;
+}
+.waves-effect{
+  margin-top: -20px;
+  margin-left: -20px;
+}
+.btn ,.button{
+  display: inline-block;
+  margin: 0.025em;
+  padding: 0.1em 0.1em;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 1px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  border: none;
+  font-size: 10px;
+  text-align: center;
+}
+.btn i, .btn-large i,
+.btn-floating i,
+.btn-large i,
+.btn-flat i {
+  font-size: 0.53rem;
+  line-height: inherit;
+}
+
+i.material-icons{
+  height: 12px;
+  line-height: 20px;
+  margin: 0 10px 0 0;
+  width: 0px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  padding-left:1px;
+}
+.tabs {
+  height: 36px;
+  width: 80%;
+}
+.collection {
+  font-size: 8px;
+}
+[type="checkbox"]+ label:before,[type="checkbox"]+ label:after{
+  width:12px; height:12px;
+  font-size:50%;
+  padding:0;
+  margin:0;
+}
+select {
+  width: 70%;
+  padding: 3px;
+  height: 1rem;
+  font-size:50%;
+}
+i.large {
+  font-size: 3rem;
+}
+h6 ,p{
+  font-size: 8px;
+}
+a{
+  font-size: 6px;
+}
+}
+@media screen and (max-width: 600px) {
+
+          .container {
+              width: 100% !important;
+              margin: auto !important;
+          }
+
+          /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+          .fluid {
+              max-width: 100% !important;
+              height: auto !important;
+              margin-left: auto !important;
+              margin-right: auto !important;
+          }
+
+          /* What it does: Forces table cells into full-width rows. */
+          /* And center justify these ones. */
+
+          /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+          .center-on-narrow {
+              text-align: center !important;
+              display: block !important;
+              margin-left: auto !important;
+              margin-right: auto !important;
+              float: none !important;
+          }
+          table.center-on-narrow {
+              display: inline-block !important;
+          }
+
+          /* What it does: Adjust typography on small screens to improve readability */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <script type="text/javascript">
+          $(document).ready(function(){
+            $('.modal').modal();
+          });
+      </script>
+      <div class="c0">
+    <div  class="card-panel small grey lighten-3">
+      <div class="row">
+        <div class="col s5"><img class="img1"src="img/logo_google.png" alt="LOGO" width="100" height="50"></div>
+        <div class="col s4"><div class="input-field col s4">
+          <input id="first_name2" type="text" class="validate" >
+        </div><div class="">
+        <a class="waves-effect waves-light btn  blue darken-2"><i class="material-icons">search</i></a></div></div>
+        <div class="col s3">
+          <a href="#apps"><i class="material-icons md-dark">apps</i></a>
+          <a href="#noti"><i class="material-icons md-dark">notifications_none</i></a>
+          <a href="#profile"><img class="circle" src="img/profile.jpg" width="40" height="40"/></a>
+        </div>
+</div>
+    </div>
+  </div>
+<style>
+  .circle{
+        height: 40;
+        width: 40;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+    .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+    .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+
+</style>
+  <div class="c1">
+  <div class="row">
+    <div class="col s2">
+      <select class="browser-default black-text">
+        <option class="red-text text-darken-2" value="1">Gmail</option>
+        <option  class="black-text"value="2">Contact</option>
+        <option  class="black-text"value="3">Tasks</option>
+    </select>
+      </div>
+    <div class="col s5">
+      <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#!" class="black-text">All</a></li>
+        <li><a href="#!" class="black-text">None</a></li>
+        <li><a href="#!" class="black-text">Read</a></li>
+        <li><a href="#!" class="black-text">Unread</a></li>
+        <li><a href="#!" class="black-text">Starred</a></li>
+        <li><a href="#!" class="black-text">Unstarred</a></li>
+  </ul>
+  <button class="btn dropdown-button grey lighten-2" href="#!" data-activates="dropdown2"><i class="material-icons md-dark">web_asset</i><label for="test5"></label><i class="material-icons md-dark">arrow_drop_down</i></button>
+    <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">refresh</i></a>
+
+
+    <ul id="dropdown3" class="dropdown-content">
+    <li><a href="#!" class="black-text">Mark all as read</a></li>
+    <li><a href="#!" class="btn disabled">Select messages to see more actions </a></li>
+    </ul>
+    <button class="btn dropdown-button grey lighten-2" href="#!" data-activates="dropdown3"><a class="grey-text text-darken-2">more</a><i class="material-icons md-dark">arrow_drop_down</i></button>
+    </div>
+    <div class="col s5">
+      <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">keyboard_arrow_left</i></a>
+      <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">keyboard_arrow_right</i></a>
+      <a class="waves-effect waves-light btn  grey lighten-2 "><i class="material-icons md-dark ">keyboard</i><a class="btn dropdown-button grey lighten-2" href="#!" data-activates="dropdown4"><i class="material-icons md-dark">arrow_drop_down</i></i></a>
+        <ul id="dropdown4" class="dropdown-content"  style="width:150;">
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i> ภาษาไทย</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i> ภาษาไทย (Pattajoti)</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i> ภาษาไทย (TIS-820.2538)</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark">edit</i>ไทย</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons">spa</i>ไทย</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i>English</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i>English Dvorak</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark ">keyboard</i>English</a></li>
+        <li><a href="#!" class="black-text"><i class="material-icons md-dark">edit</i>English</a></li>
+        <hr>
+        <li><a href="#!" class="black-text">Input Tools Setting</li>
+        </ul>
+    <a class='dropdown-button btn grey lighten-2' href='#' data-activates='dropdown5'><i class="material-icons md-dark">settings</i><i class="material-icons md-dark">arrow_drop_down</i></a>
+    <ul id="dropdown5" class="dropdown-content">
+    <li><a href="#!"></li>
+    <li><a href="#!" class="btn disabled">Display density:</a></li>
+    <li><a href="#!" class="black-text"><i class="material-icons">done</i>Comfortable (on larger displays)</a></li>
+    <li><a href="#!" class="black-text">Cozy (on larger display)</a></li>
+    <li><a href="#!" class="black-text">Compact (current view)</a></li>
+    <hr>
+    <li><a href="#!" class="black-text">Configure inbox</a></li>
+    <hr>
+    <li><a href="#!" class="black-text">Settings</a></li>
+    <li><a href="#!" class="black-text">Themes</a></li>
+    <hr>
+    <li><a href="#!" class="black-text">Customize address</a></li>
+    <li><a href="#!" class="black-text">Help</li>
+    </ul>
+  </div>
+    </div>
+</div>
+
+
+<hr>
+<div class="c2">
+<div class="row">
+    <div class="col s3 ">
+    <center>  <a class="waves-effect waves-light btn  red darken-2"  href="#modal1">COMPOSE</a></center>
+    <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>New Message</h4>
+      <input type="text" name="" value="" placeholder="Recipients">
+      <input type="text" name="" value="" placeholder="Subject">
+      <p><input type="text" name="" value="" length="150"></p>
+    </div>
+    <div class="row">
+      <div class="col s10 ">
+      <a href="#" class="waves-effect waves-light btn  blue darken-2">Sent</a>
+      <a href="#noti"><i class="material-icons md-dark">text_format</i></a>
+      <a href="#file"><i class="material-icons md-dark">attach_file</i></a>
+      <a href="#insert"><i class="material-icons md-dark">insert_drive_file</i></a>
+      <a href="#photo"><i class="material-icons md-dark">photo_library</i></a>
+      <a href="#link"><i class="material-icons md-dark">link</i></a>
+      <a href="#face"><i class="material-icons md-dark">mood</i></a>
+    </div>
+      <div class="col s2">
+        <a href="#link"><i class="material-icons md-dark">delete</i></a>
+        <a class='dropdown-button btn-flat grey lighten-2' href='#' data-activates='dropdown6'><i class="material-icons md-dark">arrow_drop_down</i></a>
+        <ul id="dropdown6" class="dropdown-content">
+        <li><a href="#!"></li>
+        <li><a href="#!" class="black-text">Default to full-screen</a></li>
+        <hr>
+        <li><a href="#!" class="black-text">Label</a></li>
+        <li><a href="#!" class="black-text">Plain text mode</a></li>
+        <hr>
+        <li><a href="#!" class="black-text">Print</a></li>
+        <hr>
+        <li><a href="#!" class="black-text">Check spelling</a></li>
+        </ul>
+      </div>
+  </div>
+  </div>
+    <div class="collection">
+      <a href="#!" class="collection-item grey-lighten-2 black-text">Inbox</a>
+      <a href="#!" class="collection-item black-text">Starred</a>
+      <a href="#!" class="collection-item black-text">Impotant</a>
+      <a href="#!" class="collection-item black-text">Chats</a>
+      <a href="#!" class="collection-item black-text">Sent Mail</a>
+      <a href="#!" class="collection-item black-text">Spam</a>
+      <a href="#!" class="collection-item black-text">Trash</a>
+      <a href="#!" class="collection-item black-text">"[Gmail]/จดหมายที่ส่งแล้ว"</a>
+      <hr>
+      <a href="#!" class="collection-item black-text">Catagories</a>
+      <a href="#!" class="collection-item black-text">Manage labels</a>
+      <a href="#!" class="collection-item black-text">"Create new label"</a>
+    </div>
+    <div class="">
+
+      <center><br><i class="material-icons large">sms</i>
+      <h6 class="grey-text text-darken-2">No Hangouts contact</h6>
+      <a class="blue-text text-darken-2" href="#find">Find someone</a></center>
+    </div>
+    <br>
+    <div class="">
+      <center><ul class="tabs">
+        <li class="tab col s3 "><a class="active" draggable=""href="#"><i class="material-icons md-dark">person</i></a></li>
+        <li class="tab col s3"><a href="#"><i class="material-icons md-dark">sms</i></a></li>
+      </ul></center>
+    </div>
+    </div>
+    <div class="col s9">
+      <div class="row">
+   <!-- <div class="col s12"> -->
+     <ul class="tabs">
+       <li class="tab col s3"><a class="grey-text text-darken-2 active" draggable=""href="#test1"><i class="material-icons md-dark">inbox</i>Primary</a></li>
+       <li class="tab col s3"><a class="grey-text text-darken-2" href="#test2"><i class="material-icons md-dark">group</i>Social</a></li>
+       <li class="tab col s3"><a class="grey-text text-darken-2" href="#test3"><i class="material-icons md-dark">local_offer</i>Promotion<span class="new badge">4</span></a></li>
+     </ul>
+   </div>
+ </div>
+ <div class="collection">
+   <a href="mail.html" class="collection-item">
+     <table>
+    <tbody>
+      <tr>
+        <td ><p><input type="checkbox" id="mail"/><label for="mail"></label></p></td>
+        <td ><a href="#fav"><i class="material-icons md-dark ">star_border</i></a></td>
+        <td ><a href="#mark"><i class="material-icons md-dark">label_outline</i></a></td>
+        <td class="grey-text text-darken-2">Trello</td>
+        <td class="grey-text text-darken-2"><input type="checkbox" name="" value="">content </td>
+        <td class="grey-text text-darken-2">6 Jun</td>
+      </tr> </table>
+    </a>
+
+   <a href="#!" class="collection-item">
+     <table>
+    <tbody>
+     <tr>
+       <td ><p><input type="checkbox" id="mail2"/><label for="mail2"></label></p></td>
+       <td ><a href="#fav"><i class="material-icons md-dark ">star_border</i></a></td>
+       <td ><a href="#mark"><i class="material-icons md-dark">label_outline</i></a></td>
+       <td class="grey-text text-darken-2">Trello</td>
+       <td  class="grey-text text-darken-2"><input type="checkbox" name="" value="">content</td>
+       <td class="grey-text text-darken-2">6 Jun</td>
+     </tr> </table>
+   </a>
+   <a href="#!" class="collection-item">
+     <table>
+       <tbody><tr>
+         <td ><p><input type="checkbox" id="mail3"/><label for="mail3"></label></p></td>
+         <td ><a href="#fav"><i class="material-icons md-dark ">star_border</i></a></td>
+         <td ><a href="#mark"><i class="material-icons md-dark">label_outline</i></a></td>
+         <td class="grey-text text-darken-2">Trello</td>
+         <td  class="grey-text text-darken-2"><input type="checkbox" name="" value="">content </td>
+         <td class="grey-text text-darken-2">6 Jun</td>
+       </tr> </table>
+     </a>
+   <a href="#!" class="collection-item">
+     <table>
+    <tbody><tr>
+      <td ><p><input type="checkbox" id="mail4"/><label for="mail4"></label></p></td>
+      <td ><a href="#fav"><i class="material-icons md-dark ">star_border</i></a></td>
+      <td ><a href="#mark"><i class="material-icons md-dark">label_outline</i></a></td>
+      <td class="grey-text text-darken-2">Trello</td>
+      <td  class="grey-text text-darken-2"><input type="checkbox" name="" value="">content </td>
+      <td class="grey-text text-darken-2">6 Jun</td>
+       </tr> </table>
+     </a>
+   <a href="#!" class="collection-item">
+     <table>
+    <tbody><tr>
+      <td ><p><input type="checkbox" id="mail5"/><label for="mail5"></label></p></td>
+      <td ><a href="#fav"><i class="material-icons md-dark ">star_border</i></a></td>
+      <td ><a href="#mark"><i class="material-icons md-dark">label_outline</i></a></td>
+      <td class="grey-text text-darken-2">Trello</td>
+      <td  class="grey-text text-darken-2"><input type="checkbox" name="" value="">content </td>
+      <td class="grey-text text-darken-2">6 Jun</td>
+       </tr> </table>
+     </a>
+   <a href="#!" class="collection-item">
+     <table>
+    <tbody><tr>
+      <td ><p><input type="checkbox" id="mail6"/><label for="mail6"></label></p></td>
+      <td ><a href="#fav"><i class="material-icons md-dark ">star_border</i></a></td>
+      <td ><a href="#mark"><i class="material-icons md-dark">label_outline</i></a></td>
+      <td class="grey-text text-darken-2">Trello</td>
+      <td  class="grey-text text-darken-2"><input type="checkbox" name="" value="">content</td>
+      <td class="grey-text text-darken-2">6 Jun</td>
+       </tr> </table>
+     </a>
+   <a href="#!" class="collection-item">
+     <table>
+    <tbody><tr>
+      <td ><p><input type="checkbox" id="mail7"/><label for="mail7"></label></p></td>
+      <td ><a href="#fav"><i class="material-icons md-dark ">star_border</i></a></td>
+      <td ><a href="#mark"><i class="material-icons md-dark">label_outline</i></a></td>
+      <td class="grey-text text-darken-2">Trello</td>
+      <td  class="grey-text text-darken-2"><input type="checkbox" name="" value="">content</td>
+      <td class="grey-text text-darken-2">6 Jun</td>
+       </tr> </table>
+     </a>
+   <a href="#!" class="collection-item">
+     <table>
+    <tbody><tr>
+      <td ><p><input type="checkbox" id="mail8"/><label for="mail8"></label></p></td>
+      <td ><a href="#fav"><i class="material-icons md-dark ">star_border</i></a></td>
+      <td ><a href="#mark"><i class="material-icons md-dark">label_outline</i></a></td>
+      <td class="grey-text text-darken-2">Trello</td>
+      <td  class="grey-text text-darken-2"><input type="checkbox" name="" value="">content</td>
+      <td class="grey-text text-darken-2">6 Jun</td>
+       </tr> </table>
+     </a>
+    </div>
+    <div class="row">
+      <div class="col s3"><p>1.38 GB (9%) of 15 GB used <br><a class="blue-text text-darken-2" href="#">Manage</a><p></div>
+      <div class="col s3"><a href="#" class="blue-text text-darken-2">Terms - Privacy</a></div>
+      <div class="col s3"><p>Last account activity: 25 minutes ago  <br><a href="#" class="blue-text text-darken-2">Details</a></div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>

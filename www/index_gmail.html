@@ -214,14 +214,40 @@ a{
             $('.modal').modal();
           });
       </script>
+      <div class="">
+        <div class="navbar-fixed">
+           <nav>
+             <div class="nav-wrapper">
+               <a href="#!" class="brand-logo">Logo</a>
+               <ul class="right hide-on-med-and-down">
+                 <li><a href="index_gmail.html">Gmail</a></li>
+                 <li><a href="index_calendar.html">Calendar</a></li>
+                  <li><a href="index_contact.html">Contact</a></li>
+                  <li><a href="index_contact.html"><i class="material-icons">home</i></a></li>
+               </ul>
+             </div>
+           </nav>
+         </div>
+      </div>
       <div class="c0">
     <div  class="card-panel small grey lighten-3">
       <div class="row">
-        <div class="col s5"><img class="img1"src="img/logo_google.png" alt="LOGO" width="100" height="50"></div>
-        <div class="col s4"><div class="input-field col s4">
-          <input id="first_name2" type="text" class="validate" >
-        </div><div class="">
-        <a class="waves-effect waves-light btn  blue darken-2"><i class="material-icons">search</i></a></div></div>
+        <div class="col s2"><img class="img1"src="img/logo_google.png" alt="LOGO" width="100" height="50"></div>
+        <div class="col s6">
+          <nav>
+             <div class="nav-wrapper">
+               <form>
+                 <div class="input-field">
+                   <input id="search" type="search" required>
+                   <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                   <i class="material-icons">close</i>
+                 </div>
+               </form>
+             </div>
+        </nav>
+        </div>
+        <div class="col s1">
+        <a class="waves-effect waves-light btn  blue darken-2"><i class="material-icons">search</i></a></div>
         <div class="col s3">
           <a href="#apps"><i class="material-icons md-dark">apps</i></a>
           <a href="#noti"><i class="material-icons md-dark">notifications_none</i></a>
@@ -370,7 +396,7 @@ a{
     </div>
     <br>
     <div class="">
-      <center><ul class="tabs">
+      <center><ul class="tabs md-dark">
         <li class="tab col s3 "><a class="active" draggable=""href="#"><i class="material-icons md-dark">person</i></a></li>
         <li class="tab col s3"><a href="#"><i class="material-icons md-dark">sms</i></a></li>
       </ul></center>
@@ -480,11 +506,37 @@ a{
      </a>
     </div>
     <div class="row">
+      <div class="col s3"></div>
       <div class="col s3"><p>1.38 GB (9%) of 15 GB used <br><a class="blue-text text-darken-2" href="#">Manage</a><p></div>
       <div class="col s3"><a href="#" class="blue-text text-darken-2">Terms - Privacy</a></div>
       <div class="col s3"><p>Last account activity: 25 minutes ago  <br><a href="#" class="blue-text text-darken-2">Details</a></div>
       </div>
     </div>
+    <footer class="page-footer">
+         <div class="container">
+           <div class="row">
+             <div class="col l6 s12">
+               <h5 class="white-text">Footer Content</h5>
+               <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+             </div>
+             <div class="col l4 offset-l2 s12">
+               <h5 class="white-text">Links</h5>
+               <ul>
+                 <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                 <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                 <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                 <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+         <div class="footer-copyright">
+           <div class="container">
+           © 2014 Copyright Text
+           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+           </div>
+         </div>
+       </footer>
   </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>

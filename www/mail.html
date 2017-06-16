@@ -13,31 +13,22 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet" href="css/material.min.css">
       <script src="css/material.min.js"></script>
+      <link rel="stylesheet" href="css/responsive.css">
     </head>
-  <!-- <div class="card-panel grey lighten-3"> This is a card panel with a teal lighten-2 class</div> -->
-<style>
-@media (min-width: 600px) {
-  body {
-    font-size: 118.8%; } }
-@media (min-width: 800px) {
-  body {
-    font-size: 131.3%; }
-    body h2, body h3, body h4, body h5 {
-      font-size: 1.875em; }
-    body h5 {
-      font-size: 1.375em; } }
-@media (min-width: 1030px) {
-  body {
-    font-size: 137.5%; } }
-@media (min-width: 1250px) {
-  body {
-    font-size: 143.8%; } }
-@media (min-width: 1400px) {
-  body {
-    font-size: 1.563em; } }
-</style>
-  </head>
   <body>
+    <div class="navbar-fixed green darken-1">
+       <nav>
+         <div class="nav-wrapper green darken-1">
+           <a href="#!" class="brand-logo">EXERCISE</a>
+           <ul class="right hide-on-med-and-down">
+             <li><a href="index_gmail.html">Gmail</a></li>
+             <li><a href="index_calendar.html">Calendar</a></li>
+              <li><a href="index_contact.html">Contact</a></li>
+              <li><a href="/."><i class="material-icons">home</i></a></li>
+           </ul>
+         </div>
+       </nav>
+     </div>
       <script type="text/javascript">
           $(document).ready(function(){
             $('.modal').modal();
@@ -47,7 +38,17 @@
       <div class="row">
         <div class="col s3"><img src="img/logo_google.png" alt="LOGO" width="160"></div>
         <div class="col s7"><div class="input-field col s6">
-          <input id="first_name2" type="text" class="validate">
+          <nav>
+             <div class="nav-wrapper">
+               <form>
+                 <div class="input-field grey lighten-5">
+                   <input id="search" type="search" required>
+                   <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                   <i class="material-icons">close</i>
+                 </div>
+               </form>
+             </div>
+        </nav>
         </div><a class="waves-effect waves-light btn  blue darken-2"><i class="material-icons">search</i></a></div>
         <div class="col s2">
           <a href="#apps"><i class="material-icons md-dark">apps</i></a>
@@ -78,7 +79,7 @@
     </select>
       </div>
     <div class="col s1">
-        <a class="btn grey lighten-2" href="./"><i class="material-icons md-dark">keyboard_return</i></a>
+        <a class="btn grey lighten-2" href="index_gmail.html"><i class="material-icons md-dark">keyboard_return</i></a>
     </div>
     <div class="col s3">
         <a class="waves-effect waves-light btn  grey lighten-2"><i class="material-icons md-dark">move_to_inbox</i></a>
@@ -257,17 +258,10 @@
         <div class="col s4"><p>Last account activity: 25 minutes ago  <br><a href="#" class="blue-text text-darken-2">Details</a></div>
         </div>
     </div>
-
-
     </div>
     </div>
-
-
- </div>
-
-
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     </div>
+    </div>
       <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>

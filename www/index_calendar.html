@@ -12,31 +12,17 @@
     <meta name="author" content="w3widgets.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <!-- Respomsive slider -->
-    <link href="/css/responsive-calendar.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="css/material.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <script src="css/material.min.js"></script>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/css/responsive.css" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <script type="text/javascript"src="js/jquery-1.11.3.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="css/material.min.css">
+      <script src="css/material.min.js"></script>
+      <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body>
-    <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal bottom-sheet">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-          
     <div class="">
       <div class="navbar-fixed green darken-1">
          <nav>
@@ -97,28 +83,40 @@
 
 
 </style>
-    <div class="">
-      <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
-
-<!-- Modal Structure -->
-<div id="modal1" class="modal bottom-sheet">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
-
+    <a class="modal-trigger waves-effect waves-light btn" href="#modal1">CREATE</a>
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <div >
+        <a class="modal-action modal-close btn grey lighten-2" href="#!"><i class="material-icons md-dark">keyboard_return</i></a>
+        <a class="modal-action modal-close btn red lighten-2" href="#!">SAVE</a>
+        <a class="modal-action modal-close btn grey lighten-2 black-text" href="#!">discard</a>
+        <hr>
+      </div>
+        <div class="input-field col s6">
+          <input placeholder="Untitled event" id="first_name" type="text" class="validate">
+        </div>
+        <input type="date" class="datepicker">
+        <input type="time" class="datepicker">
+        <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" placeholder="description"class="materialize-textarea"></textarea>
+          </div>
+        </div>
+      </form>
     </div>
+        <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+      </div>
+    </div>
+
     <div class="container">
       <!-- Responsive calendar - START -->
     	<div class="responsive-calendar">
         <div class="controls">
-            <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+            <a class="pull-left" data-go="prev"><div class="btn btn-primary"><i class="material-icons md-dark">keyboard_arrow_left</i></div></a>
             <h4><span data-head-year></span> <span data-head-month></span></h4>
-            <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+            <a class="pull-right" data-go="next"><div class="btn btn-primary"><i class="material-icons md-dark">keyboard_arrow_right</i></div></a>
         </div><hr/>
         <div class="day-headers">
           <div class="day header">Mon</div>
@@ -129,15 +127,11 @@
           <div class="day header">Sat</div>
           <div class="day header">Sun</div>
         </div>
-        <div class="days" data-group="days">
-
-        </div>
+        <div class="days" data-group="days"></div>
 
       </div>
-      <!-- Responsive calendar - END -->
     </div>
     <script src="../js/jquery-1.11.3.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/responsive-calendar.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
@@ -164,5 +158,6 @@
            </div>
          </div>
        </footer>
+       <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
